@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnProductLading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="成品酒发货"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnPackingLading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="包装物发货"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnAsset"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="固定资产盘点"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSecondCheck1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="包装物复检" />
+        <!-- android:visibility="gone" -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btnSecondCheck"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/person_box" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="包装物复检"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="100dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btBottleBoxStock"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/warehouse" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="箱瓶库存"
+                android:textSize="11dp" 
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/btLoanStock"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/box" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="代保管库存"
+                android:textSize="11dp" 
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" 
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/check2" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="盘点"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/query">
+            </ImageButton>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="结算单查询"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="1dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/check1"
+                android:visibility="invisible" >
+            </ImageButton>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="11dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- =========================================================== -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_above="@+id/footer"
+        android:layout_weight="0.4"
+        android:gravity="bottom" >
+ 
+
+        <ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1"
+        android:gravity="bottom" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_footer" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+       <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+     
+       <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.9"
+   		android:orientation="vertical">
+   		
+           
+         <TextView  
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="1. 请选择所属机构:" 
+		        style="@style/largeText"/>    
+         <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"> 
+		    <Spinner
+		        android:id="@+id/cmbCorp"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="请选择所属机构:" 
+		        android:layout_weight="0.6" 
+		        style="@style/largeText" /> 
+    	</LinearLayout>   
+    	 <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+	    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="2. 执行下载操作："
+		        android:layout_weight="0.2"
+		        style="@style/largeText" />  
+		   
+    	</LinearLayout>  
+        
+    	<Button
+    	    android:id="@+id/btnRun"
+    	    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="开始下载" 
+	        android:layout_gravity="right"
+	        style="@style/largeText"
+    	    ></Button>
+    	
+    	 <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+            
+    	     <TextView 
+    	        android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content"
+	        	android:text="温馨提示："
+	        	style="@style/largeText"
+	        	></TextView>
+	        	
+    	     <TextView 
+    	        android:layout_width="fill_parent"
+	        	android:layout_height="wrap_content"
+	        	android:text="1) 此操作需联网，建议在WIFI下进行，若在2G/3G下可能会产生流量费用；
+2) 此操作较耗时，一般需要几分钟至几十分钟，根据网络情况而定；"
+style="@style/largeText"
+    	         />
+    	     
+    	 </LinearLayout>     
+           
+           
+           
+   		
+       </LinearLayout>
+    
+          <!-- 菜单 -->
+  <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"  > 
+
+       	<ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="100dp"
+            android:layout_height="38dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+        
+      	<ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+     </RelativeLayout>   
+  
+     <RelativeLayout 
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.1" 
+   		android:gravity="bottom">
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" /> 
+      </RelativeLayout> 
+
+</LinearLayout>

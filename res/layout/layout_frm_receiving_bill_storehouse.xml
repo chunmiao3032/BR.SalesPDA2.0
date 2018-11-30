@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="接收机构："
+            android:textSize="30dp" 
+            android:background="@color/blue"/>
+
+        <TextView
+            style="@style/largeText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="接收机构：" 
+              android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/cmbCorporation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="复检现场："
+            android:textSize="30dp" 
+            android:background="@color/blue"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/largeText"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="仓库条码：" />
+
+            <EditText
+                android:id="@+id/txtBarcode"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:hint="仓库条码" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/largeText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="复检现场:" />
+
+        <Spinner
+            android:id="@+id/cmbStorehouse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btOk"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="确定" />
+
+</LinearLayout>

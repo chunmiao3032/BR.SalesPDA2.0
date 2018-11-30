@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+     
+     
+     <ScrollView        
+	    android:layout_width="fill_parent"    
+	    android:layout_height="fill_parent"    
+	    android:scrollbars="vertical"    
+	    android:fadingEdge="vertical"> 
+     
+     <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.7"
+   		android:orientation="vertical">
+   		
+         
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="使用状况"
+		        android:layout_weight="0.2" />  
+		    <Spinner
+		        android:id="@+id/cmbStatus"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="单号" 
+		        android:layout_weight="0.6" />
+	    	<Button
+	    	    android:id="@+id/btnSubmit"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="提交" 
+		        android:layout_weight="0.2"
+	    	    ></Button>
+	    </LinearLayout> 
+         
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产编号"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtCode"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产编号" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout> 
+	    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产名称"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtName"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产名称" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout> 
+ 
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产分类"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtAssetType"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产分类" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>         
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产摘要"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtAbstract"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产摘要" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>            
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="使用部门"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtDepartment"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="使用部门" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>          
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="存放地点"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtLocation"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="存放地点" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>  
+	    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="规格型号"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtStandard"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="规格型号" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout> 
+	    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="增加方式"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtHowGetting"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="增加方式" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>   
+	    
+         <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="使用年限"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtMonthUsed"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="使用年限" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>          
+                
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="月折旧率"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtDevalueRate"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="月折旧率" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>                  
+                
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="折旧方法"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtDevalueMethod"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="折旧方法" 
+		        android:layout_weight="0.8" 
+		        android:enabled="false"/>
+	    
+	    </LinearLayout>                  
+                
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产原值"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtOriginalMoney"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产原值" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>                
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="资产数量"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtCount"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="资产数量" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>             
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="启用日期"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtStartUsingDate"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="启用日期" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>          
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="出厂时间"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtManufactureDate"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="出厂时间" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>  
+         
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="生产厂家"
+		        android:layout_weight="0.2" />  
+		    <EditText
+		        android:id="@+id/txtSupplier"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="生产厂家" 
+		        android:layout_weight="0.8"
+		        android:enabled="false" />
+	    
+	    </LinearLayout>   
+          
+         
+     </LinearLayout>    
+     
+     </ScrollView>
+     
+     
+     
+     <!-- 菜单 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip" 
+        android:layout_weight="0.2" 
+        android:layout_above="@+id/footer" 
+        android:gravity="bottom"
+        android:visibility="gone">
+
+       	<ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="100dp"
+            android:layout_height="125dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+        
+      	<ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+     </RelativeLayout>   
+  
+     <RelativeLayout 
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.1" 
+   		android:gravity="bottom">
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" /> 
+      </RelativeLayout> 
+      
+</LinearLayout>

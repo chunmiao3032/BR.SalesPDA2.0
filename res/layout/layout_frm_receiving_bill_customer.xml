@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/layout_header" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_above="@+id/footer"
+        android:layout_weight="0.9" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="请扫描客户身份识别卡："
+                android:textSize="25dp" 
+                android:background="@color/blue"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="卡ID：" />
+
+                <TextView
+                    android:id="@+id/tvCardID"
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="0.6"
+                    android:hint="客户卡号" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:layout_marginTop="40dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="卡号：" />
+
+                <TextView
+                    android:id="@+id/tvCustomerID"
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="0.6"
+                    android:hint="身份识别卡号" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="客户编码：" />
+
+                <TextView
+                    android:id="@+id/tvCustomerCode"
+                    style="@style/largeText"
+                    android:layout_width="0dip"
+                    android:layout_height="30dip"
+                    android:layout_weight="0.6"
+                    android:hint="客户编码" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/largeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:text="客户名称："
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    style="@style/largeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:hint="客户名称" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="232dp"
+                    android:layout_height="212dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/phonenfc" />
+                
+                <Button
+                    android:id="@+id/btOK"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:text="获取客户初检单" 
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvErrMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myred2"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 菜单 -->
+
+    <RelativeLayout
+        android:id="@+id/allmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/llmenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <RelativeLayout
+                android:id="@+id/rleft"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/footer"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.7"
+                android:visibility="invisible" >
+
+                <ListView
+                    android:id="@+id/lv_menuLeft"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="left" >
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rright"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/footer"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.3"
+                android:visibility="invisible" >
+
+                <ListView
+                    android:id="@+id/lv_menuRight"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp" >
+                </ListView>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0.1"
+        android:gravity="bottom" >
+    </RelativeLayout>
+
+</LinearLayout>

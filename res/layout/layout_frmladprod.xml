@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+    
+  <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"  
+        android:layout_weight="0.9"
+        android:layout_above="@+id/footer"  > 
+            
+     <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content" 
+   		android:orientation="vertical">
+   		
+       <TextView 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="当前发货仓库:" 
+	        style="@style/largeText"/> 
+         
+        <Spinner
+	        android:id="@+id/cmbStorehouse"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" />
+         
+       <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+           
+	        <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="条码"
+		        android:layout_weight="0.3"
+		        style="@style/largeText" />   
+		    <EditText
+		        android:id="@+id/txtBarcode"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="条码" 
+		        android:layout_weight="0.7"  
+		        />
+	    
+		</LinearLayout>
+		
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+            <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="单号"
+		        android:layout_weight="0.3" 
+		        android:focusable="false"
+		        style="@style/largeText"/>  
+		    <TextView
+		        android:id="@+id/txtBillNO"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="单号" 
+		        android:layout_weight="0.7" 
+		        android:focusable="false"
+		        style="@style/largeText"/>
+	    
+	    </LinearLayout>
+	
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="数量"
+		        android:layout_weight="0.3" 
+		        android:focusable="false"
+		        style="@style/largeText"/>  
+		    <TextView
+		        android:id="@+id/txtCount"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="数量" 
+		        android:layout_weight="0.7"
+		        android:focusable = "false"
+		        style="@style/largeText"/>
+		    
+		</LinearLayout>    
+	    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+             <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="客户"
+		        android:layout_weight="0.3" 
+		        android:focusable = "false"
+		        style="@style/largeText"/> 
+		     <TextView
+		        android:id="@+id/txtCustomer"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="客户" 
+		        android:layout_weight="0.7"
+		        android:focusable = "false" 
+		        style="@style/largeText"/>
+	     
+	     </LinearLayout>
+	     
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal">
+		    
+             <TextView  
+	            android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:text="产品"
+		        android:layout_weight="0.3" 
+		        android:focusable = "false"
+		        style="@style/largeText"/> 	     
+		     <TextView
+		        android:id="@+id/txtProduct"
+		        android:layout_width="0dip"
+		        android:layout_height="wrap_content"
+		        android:hint="产品" 
+		        android:layout_weight="0.7" 
+		        android:focusable = "false"
+		        style="@style/largeText"/>
+		</LinearLayout>
+	    
+	        
+    </LinearLayout>
+</RelativeLayout>    
+   
+    <!-- 菜单 -->
+   
+ <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"  > 
+  
+       	<ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="125dp"
+            android:layout_height="130dp" 
+           	android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:focusable = "false" >
+        </ListView>
+ 
+    
+      	<ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp" 
+            android:visibility="gone" 
+            android:layout_gravity="bottom"
+            android:focusable = "false" >
+        </ListView>
+   
+ </RelativeLayout> 
+  
+     <RelativeLayout 
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.1" 
+   		android:gravity="bottom">
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" 
+     	    android:focusable = "false"/>
+     
+     </RelativeLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+
+</LinearLayout>

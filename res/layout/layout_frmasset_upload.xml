@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        layout="@layout/layout_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.7"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/largeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="将盘点结果上传至服务器：" />
+
+            <Button
+                android:id="@+id/btnRun"
+                style="@style/largeText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="开始上传" >
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/largeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温馨提示：" />
+
+            <TextView
+                style="@style/mlargeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1) 上传后本地会清除盘点记录，建议在盘点全部结束后执行此操作；
+2) 此操作需联网，建议在WIFI下进行，若在2G/3G/4G下可能会产生流量费用；
+3) 此操作较耗时，一般需要几分钟至几十分钟，根据网络情况而定；" />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/myred2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 菜单 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_above="@+id/footer"
+        android:layout_weight="0.2"
+        android:gravity="bottom"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:visibility="gone" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.1"
+        android:gravity="bottom" >
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_footer" />
+    </RelativeLayout>
+
+</LinearLayout>

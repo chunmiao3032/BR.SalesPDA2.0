@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+    
+     <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.7"
+   		android:orientation="vertical">
+   		
+     <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="wrap_content" 
+   		android:orientation="horizontal">
+	        <TextView  
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:text="当前需要处理的单据： "
+	            style="@style/largeText"
+	            />
+	        <TextView  
+	            android:id="@+id/lblBillNum"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:text="0条"
+	            style="@style/largeText"
+	            />
+        
+        </LinearLayout>
+   		
+        <ListView
+            android:id="@+id/pnlFull"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"   
+            >
+        </ListView> 
+   		
+         
+     </LinearLayout>
+     
+     <!-- 菜单 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip" 
+        android:layout_weight="0.2" 
+        android:layout_above="@+id/footer" 
+        android:gravity="bottom"
+        android:visibility="gone">
+
+       	<ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="100dp"
+            android:layout_height="125dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+        
+      	<ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+     </RelativeLayout>   
+  
+     <RelativeLayout
+         android:id="@+id/footer"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="bottom" >
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" />
+     
+     </RelativeLayout>
+     
+     
+     
+    
+
+</LinearLayout>

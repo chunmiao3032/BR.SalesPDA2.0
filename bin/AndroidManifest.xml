@@ -1,0 +1,126 @@
+﻿<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.br.salespda"
+    android:versionCode="3"
+    android:versionName="2.0" >
+
+    <!-- 1.5 2016-05-09 15:30 解决成品酒不是整拍出库,显示托盘数量时带小数 -->
+    <!-- 1.6 2016-07-14 15:00 解决批号偶尔显示异常问题 -->
+    <!-- 1.7 2016-07-15 08:46 解决批号偶尔显示异常问题 -->
+    <!-- 1.8 2016-12-26 14:21 解决固定资产盘点无法上传问题 -->
+    <!-- 1.9 2017-01-17 13:16 解决webservice地址更换，无法选择数据库问题 -->
+    <!-- 1.10 2017-03-06 14:30 固定资产扫描页面增加，模式选项，录入模式，扫描模式 -->
+    <!-- 2.0 2017-07-05 14:30 固定资产扫描页面去掉了手工录入条码回车盘点成功后跳出条码格式不正确的提示，
+    						       查看盘点结果中将最近盘点的记录显示在最上，
+    						       盘点结果上传界面，在上传后将上传的记录数，成功失败的记录数，具体失败信息显示在上传界面的最下面
+    						      修改自动更新，将全局变量赋值放在login窗体的oncreate事件中
+    						      -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="13" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" >
+    </uses-feature>
+
+    <application
+        android:name="com.br.salespda.Crash.CrashApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".main.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.br.salespda.main.FrmMainActivity"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmLadPackActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmLadProdActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmAssetActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmLadProd_BillIndexActivity" >
+        </activity>
+        <activity
+            android:name="com.br.salespda.main.FrmLadProd_BillTabActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmAsset_UploadActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmAsset_StateActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmAsset_DetailActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmAsset_DownloadActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.FrmMain_SettingActivity" >
+        </activity>
+        <activity android:name="com.br.salespda.main.frm_ScanBarcodeActivity" >
+        </activity>
+        <activity
+            android:name="com.br.salespda.main.FrmReceivingBill_CustomerActivity"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <!--
+ 	        <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" >
+                </action>
+                <category android:name="android.intent.category.DEFAULT" >
+                </category>
+            </intent-filter>
+            
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            -->
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity
+            android:name="com.br.salespda.main.FrmReceivingBill_FirstCheck_Bill"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity
+            android:name="com.br.salespda.main.FrmReceivingBill_StoreHouseActivity"
+            android:launchMode="singleInstance"  >
+        </activity>
+        <activity 
+            android:name="com.br.salespda.main.FrmReceivingBill_SecondCheck_Bill"
+            android:launchMode="singleInstance" 
+            ></activity>
+    </application>
+
+</manifest>

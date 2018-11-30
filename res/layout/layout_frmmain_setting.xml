@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+ <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+    
+     
+     <LinearLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.7"
+   		android:orientation="vertical">
+   		
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:background="@drawable/border">
+           
+	        <TextView  
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="数据库服务器设置："  />   
+		  	<Spinner 
+		  	    android:id="@+id/cmbServerList"
+		  	    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		  	    />
+		  	<TextView  
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="1) 请选择当前PDA将要连接的数据库。
+2) 提示：如无特殊需要，请不要随意更改默认设置。"  />   
+		 
+		</LinearLayout>  
+		
+        <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:background="@drawable/border">
+           
+	        <TextView  
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="远程Web服务设置："  />   
+		  	<EditText 
+		  	    android:id="@+id/txtServiceURL"
+		  	    android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:hint="远程Web服务设置" 
+		  	    />
+		  	<TextView  
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="1) 远程提供业务功能服务的地址；
+2) 注意：此功能是高级设置，请在系统管理员的指导的指导下进行设置操作；"  />   
+		 
+		</LinearLayout>  
+        
+        
+        
+   		
+         
+         
+      </LinearLayout>
+      
+      <!-- 菜单 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip" 
+        android:layout_weight="0.2" 
+        android:layout_above="@+id/footer" 
+        android:gravity="bottom"
+        android:visibility="gone">
+
+       	<ListView
+            android:id="@+id/lv_menuLeft"
+            android:layout_width="175dp"
+            android:layout_height="175dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+        
+      	<ListView
+            android:id="@+id/lv_menuRight"
+            android:layout_width="100dp"
+            android:layout_height="100dp" 
+            android:visibility="gone"
+            android:layout_gravity="bottom">
+        </ListView>
+     </RelativeLayout>   
+  
+     <RelativeLayout 
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+   		android:layout_height="0dip"
+   		android:layout_weight="0.1" 
+   		android:gravity="bottom">
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" />
+     
+     </RelativeLayout>
+     
+    
+    
+</LinearLayout>

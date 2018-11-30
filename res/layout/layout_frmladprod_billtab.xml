@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_header" 
+        android:layout_gravity="center_horizontal"/>
+    
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dip"
+         android:layout_weight="0.7"
+         android:orientation="vertical" >
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+
+             <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.1"
+                 android:text="单号" 
+                 android:gravity="right"
+                 style="@style/mlargeText"/>
+
+             <TextView
+                 android:id="@+id/txtBillNO"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.7"
+                 android:text="FP1234567890"
+                 android:textSize="16dip"   
+                 android:focusable="false"/>
+
+             <TextView
+                 android:id="@+id/txtCount"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2"
+                 android:text="0"
+                 android:textSize="16dip"  
+                 android:focusable="false"/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+
+             <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.1"
+                 android:text="客户" 
+                 android:gravity="right"
+                 style="@style/mlargeText"/>
+
+             <EditText
+                 android:id="@+id/txtCustomer"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.9"
+                 android:text="华润雪花啤酒（中国）有限公司沈阳销售分公司"
+                 android:textSize="16dip"  
+                 android:focusable="false"/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+
+             <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.1"
+                 android:text="产品" 
+                 android:gravity="right"
+                 style="@style/mlargeText"/>
+
+             <EditText
+                 android:id="@+id/txtProduct"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.9"
+                 android:text="雪花金标纯生8度1*24纸箱（含瓶）（00）"
+                 android:textSize="16dip"  
+                 android:focusable="false"/>
+         </LinearLayout>
+ 
+
+           <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+             <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2"
+                 android:text="生产线"  
+                 style="@style/mlargeText"/>
+             
+              <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2"
+                 android:text="起始批号" 
+                 style="@style/mlargeText"/>
+              
+              <TextView
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2"
+                 android:text="结束批号" 
+                 style="@style/mlargeText"/>
+              
+            
+            </LinearLayout>
+         
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal" >
+  
+            <EditText 
+                 android:id="@+id/txtLineNO"
+			     android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.1" 
+                 android:textSize="11dip"  
+			    />
+               
+             
+             <EditText
+                 android:id="@+id/txtBeginYMD"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2" 
+                 android:textSize="11dip" 
+                 android:numeric="integer" />
+
+             <EditText
+                 android:id="@+id/txtBeginHMS"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.25"
+                 android:text=""
+                 android:textSize="11dip"
+                 android:numeric="integer"  />
+             
+             <EditText
+                 android:id="@+id/txtEndYMD"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.2" 
+                 android:textSize="11dip"
+                 android:numeric="integer"  />
+
+             <EditText
+                 android:id="@+id/txtEndHMS"
+                 android:layout_width="0dip"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="0.25"
+                 android:text=""
+                 android:textSize="11dip"
+                 android:numeric="integer"  />
+             
+         </LinearLayout>
+         
+
+         <ListView
+             android:id="@+id/pnlFull"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="0.59"
+             android:focusable="false"
+              >
+         </ListView>
+            
+ 
+  
+           <TextView 
+               android:id="@+id/tvNo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:text="111"
+               android:textSize="15dip"/>
+             
+ 
+    
+     </LinearLayout>
+     
+     <RelativeLayout
+         android:id="@+id/footer"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="bottom" >
+	     
+     	<include
+     	    android:layout_width="wrap_content"
+     	    android:layout_height="wrap_content"
+     	    layout="@layout/layout_footer" />
+     
+     </RelativeLayout>
+     
+     
+     
+
+</LinearLayout>
